@@ -192,6 +192,8 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Collaborator.cs" />
+    <Compile Include="Models\PickedUser.cs" />
+    <Compile Include="Models\TrelloUser.cs" />
     <Compile Include="ReverseModels\AspNetUserRoles.cs" />
     <Compile Include="Models\Board.cs" />
     <Compile Include="Models\Card.cs" />
