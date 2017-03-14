@@ -8,8 +8,8 @@ namespace FakeTrello.DAL
 {
     public class FakeTrelloRepository : IRepository
     {
-        public FakeTrelloContext context { get; set; }//property
-        public object Context { get; set; }
+        public FakeTrelloContext Context { get; set; }//property
+      //  public object Context { get; set; }
 
         public FakeTrelloRepository()
         {
@@ -18,12 +18,14 @@ namespace FakeTrello.DAL
 
         public FakeTrelloRepository(FakeTrelloContext context)
         {
-            this.context = context;
+            this.Context = context;
         }
 
         public void AddBoard(string name, ApplicationUser owner)
         {
-            throw new NotImplementedException();
+            Board board = new Board { Name = name, Owner = owner, };
+            Context.Boards.Add(board);
+            Context.SaveChanges();
         }
 
         public void AddList(string name, Board board)
