@@ -171,6 +171,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AskedToSave.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -180,9 +181,14 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DAL\Repository\CardRepository.cs" />
     <Compile Include="DAL\FakeTrelloContext.cs" />
-    <Compile Include="DAL\FakeTrelloRepository.cs" />
-    <Compile Include="DAL\IRepository.cs" />
+    <Compile Include="DAL\Repository\FakeTrelloRepository.cs" />
+    <Compile Include="DAL\IBoardManager.cs" />
+    <Compile Include="DAL\IBoardQuery.cs" />
+    <Compile Include="DAL\IListRepository.cs" />
+    <Compile Include="DAL\ICardRepository.cs" />
+    <Compile Include="DAL\Repository\ListRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -203,6 +209,7 @@
     <Compile Include="ReverseModels\AspNetRoles.cs" />
     <Compile Include="ReverseModels\AspNetUsers.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="TinyIoC.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
